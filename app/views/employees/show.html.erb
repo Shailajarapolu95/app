@@ -1,0 +1,16 @@
+
+First Name:<%=@employee.First_name %><br>
+ Last Name:<%=@employee.Last_name %><br>
+ Age:<%=@employee.Age %><br>
+ Gender:<%=@employee.Gender %><br>
+  Skills:<%=@employee.Skills %><br>
+ Department:<%=@employee.Department %><br>
+  username: <%=@employee.username %><br>
+  Password :<%=@employee.password%><br>
+
+<ul>
+<%= link_to "Click here to submit another response" ,new_employee_path%><br>
+
+</ul>
+
+<%= button_to "Back to index page",blog_registration_path %>

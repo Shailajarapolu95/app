@@ -1,0 +1,11 @@
+<h1>Employee registration form</h1><br>
+<h4>Names of Registered employees:</h4>
+<ul>
+  <% @employees.each do |employee| %>
+    <li>
+        <%= link_to employee.First_name,employee %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "Click here to Register", new_employee_path %>

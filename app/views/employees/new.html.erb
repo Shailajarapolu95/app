@@ -1,0 +1,62 @@
+<h1>New Registration</h1>
+
+<%= form_with model: @employee do |form| %>
+  <div>
+    <%= form.label :First_name %><br>
+    <%= form.text_field :First_name %>
+    
+  </div>
+
+  <div>
+    <%= form.label :Last_name %><br>
+    <%= form.text_field :Last_name %>
+  </div>
+ 
+ <div>
+  <%= form.label :Age %><br>
+  <%= form.date_field :Age %>
+</div>
+<div>
+   <%= form.label :Gender %><br>
+   <%= form.radio_button :Gender, "Female" %>
+   <%= form.label :Gender, "Female" %>
+   <%= form.radio_button :Gender, "Male" %>
+   <%= form.label :Gender, "Male" %><br>
+  </div>
+<div class="form-group">
+
+<%= form.label :Skills %><br>
+
+<%= form.select :Skills, ["Java standard edition", "SQL", "spring boot", "HTML", "C#.NET", "RUBY"] %>
+
+</div>
+
+<div>
+  <%= form.label :Departments %><br>
+   <%= form.check_box "HR & Pyroll" %>
+   <%= form.label "HR & Pyroll" %><br>
+   </div>
+   <div>
+   <%= check_box "Sales & Marketing", "yes" %>
+   <%= label_tag "Sales & Marketing" %><br>
+   <%= check_box"Admin Department", "yes" %>
+   <%= label_tag "Admin Department" %><br>
+   <%= check_box_tag "Accounts &Taxation", "yes" %>
+   <%= label_tag "Accounts &Taxation" %><br>
+   <%= check_box_tag "IT Department", "yes" %>
+   <%= label_tag "IT Department" %><br>
+
+</div>
+<div>
+    <%= form.label :username %><br>
+    <%= form.text_field :username %>
+    </div>
+  <div>
+<%= form.label :password %><br>
+<%= form.password_field :password %>
+</div>
+
+  <div>
+    <%= form.submit "Register"  %>
+  </div>
+<% end %>

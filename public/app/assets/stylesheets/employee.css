@@ -1,0 +1,35 @@
+body {
+    margin:4px ;
+    text-align:20px; 
+    color:aqua;
+    font-style:bold;
+    font-size:20px;
+    background-color:aqua;
+    /* width:20px; */ 
+   color:blue;
+    /* display:grid; */
+   }
+   h1{                
+    background-color:darkmagenta;
+    /* text-indent: 50px; */
+    text-transform:uppercase;
+    text-align: center;
+    }
+      h1 {
+        display:inline;
+        padding: 1px;
+        font-size: 24px;
+        color:blanchedalmond;
+      }
+      h4 {
+        display:inline;
+        padding: 1px;
+        font-size: 24px;
+        color:brown;
+      }
+      div{
+        text-align:left;
+  
+      }
+      
+    
