@@ -1,62 +1,51 @@
 <h1>New Registration</h1>
-
 <%= form_with model: @employee do |form| %>
-  <div>
-    <%= form.label :First_name %><br>
-    <%= form.text_field :First_name %>
-    
-  </div>
-
-  <div>
-    <%= form.label :Last_name %><br>
-    <%= form.text_field :Last_name %>
-  </div>
- 
- <div>
-  <%= form.label :Age %><br>
-  <%= form.date_field :Age %>
+<div>
+<h5><%= form.label :First_name %>
+<%= form.text_field :First_name %></h5>
 </div>
 <div>
-   <%= form.label :Gender %><br>
-   <%= form.radio_button :Gender, "Female" %>
-   <%= form.label :Gender, "Female" %>
-   <%= form.radio_button :Gender, "Male" %>
-   <%= form.label :Gender, "Male" %><br>
-  </div>
+<h5><%= form.label :Last_name %>
+<%= form.text_field :Last_name %></h5>
+</div>
+<div>
+<h5> <%= form.label :Age %>
+<%= form.date_field :Age %></h5>
+</div>
+<div>
+<h5> <%= form.label :Gender %><br>
+<%= form.radio_button :Gender, "Female" %>
+<%= form.label :Gender, "Female" %>
+<%= form.radio_button :Gender, "Male" %>
+<%= form.label :Gender, "Male" %></h5>
+</div>
 <div class="form-group">
-
-<%= form.label :Skills %><br>
-
-<%= form.select :Skills, ["Java standard edition", "SQL", "spring boot", "HTML", "C#.NET", "RUBY"] %>
-
-</div>
-
-<div>
-  <%= form.label :Departments %><br>
-   <%= form.check_box "HR & Pyroll" %>
-   <%= form.label "HR & Pyroll" %><br>
-   </div>
-   <div>
-   <%= check_box "Sales & Marketing", "yes" %>
-   <%= label_tag "Sales & Marketing" %><br>
-   <%= check_box"Admin Department", "yes" %>
-   <%= label_tag "Admin Department" %><br>
-   <%= check_box_tag "Accounts &Taxation", "yes" %>
-   <%= label_tag "Accounts &Taxation" %><br>
-   <%= check_box_tag "IT Department", "yes" %>
-   <%= label_tag "IT Department" %><br>
-
+<h5><%= form.label :Skills %><br>
+<%= form.select :Skills, ["Java standard edition", "SQL", "spring boot", "HTML", "C#.NET", "RUBY"] %></h5>
 </div>
 <div>
-    <%= form.label :username %><br>
-    <%= form.text_field :username %>
-    </div>
-  <div>
-<%= form.label :password %><br>
-<%= form.password_field :password %>
+<strong><%= form.label :Department %></strong><br>
+<%= label_tag 'Department_HR & Pyroll', 'HR & Pyroll'%>
+<%= check_box_tag'employee[Department][]', 'HR & Pyroll',checked('HR & Pyroll'), id: 'Department_HR & Pyroll'%><br>
+<%= label_tag 'Department_Sales & Marketing', 'Sales & Marketing'%>
+<%= check_box_tag'employee[Department][]', 'Sales & Marketing', checked('Sales & Marketing'), id: 'Department_Sales & Marketing'%><br>
+<%= label_tag 'Department_Admin Department', 'Admin Department'%>
+<%= check_box_tag'employee[Department][]', 'Admin Department', checked('Admin Department'), id: 'Department_Admin Department'%><br>
+<%= label_tag 'Department_Accounts &Taxation', 'Accounts &Taxation'%>
+<%= check_box_tag'employee[Department][]', 'Accounts &Taxation', checked('Accounts &Taxation'), id: 'Department_Accounts &Taxation'%><br>
+<%= label_tag 'Department_IT Department', 'IT Department'%>
+<%= check_box_tag'employee[Department][]', 'IT Department', checked('IT Department'), id: 'Department_IT Department'%><br>
 </div>
-
-  <div>
-    <%= form.submit "Register"  %>
-  </div>
+</div>
+<div>
+<h5><%= form.label :username %>
+<%= form.text_field :username %></h5>
+</div>
+<div>
+<h5><%= form.label :password %>
+<%= form.password_field :password %></h5>
+</div>
+<div>
+<strong> <%= form.submit "Register"  %></strong>
+</div>
 <% end %>
